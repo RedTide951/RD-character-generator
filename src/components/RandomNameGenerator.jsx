@@ -10,12 +10,42 @@ const RandomNameGenerator = ({ firstNames, lastNames }) => {
     setRandomName(newName);
   };
 
+  const handleNameChange = (event) => {
+    setRandomName(event.target.value);
+  };
+
   return (
     <div>
-      <h1 style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginBottom: '20px', marginTop: '20px'}}>Rafo's Dungeons Character Generator</h1>
-      <div style={{ marginTop: '20px', border: '1px solid #ccc', padding: '10px', display: 'flex', alignItems: 'center' }}>
-        <Button variant="contained" color="primary" style={{ marginRight: '10px', width: '220px' }} onClick={handleGenerateClick}>Generate Name</Button>
-        <p style={{ marginLeft: '2px',fontSize: '20px', flexGrow: 1 }}>{randomName}</p>
+      <div
+        style={{
+          marginTop: "20px",
+          border: "1px solid #ccc",
+          padding: "10px",
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
+        <Button
+          variant="contained"
+          color="primary"
+          style={{ marginRight: "10px", width: "220px" }}
+          onClick={handleGenerateClick}
+        >
+          Generate Name
+        </Button>
+        <input
+          type="text"
+          value={randomName}
+          onChange={handleNameChange}
+          style={{
+            marginLeft: "2px",
+            fontSize: "18px",
+            flexGrow: 1,
+            border: "1px solid #ccc",
+            maxWidth: "200px",
+            outline: "none",
+          }}
+        />
       </div>
     </div>
   );

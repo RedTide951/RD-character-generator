@@ -1,21 +1,21 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Grenze&family=Grenze+Gotisch&family=IM+Fell+English+SC&family=Lancelot&family=Pirata+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Grenze&family=Grenze+Gotisch&family=IM+Fell+English+SC&family=Lancelot&family=Pirata+One&display=swap");
 
 h1 {
-  font-family: 'Pirata One', sans-serif;
+  font-family: "Pirata One", sans-serif;
   font-size: xx-large;
 }
 
@@ -23,18 +23,19 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 20px;
 }
 
 .result-item {
   padding: 10px;
   margin: 10px;
   text-align: center;
-  border: 1px solid #ccc;
-  height: 80px;
-  flex: 1 0 calc(33.33% - 20px);
+  font-family: "roboto", sans-serif;
+  border: 5px solid #ccc;
+  display: inline-block; /* Changed to inline-block */
+  width: calc(33.33% - 20px); /* Adjusted width */
+  box-sizing: border-box; /* Added to include padding and border within width */
+  vertical-align: top; /* Ensures items align properly */
 }
-
 
 /* Media query for screens with a maximum width of 600px */
 @media (max-width: 600px) {

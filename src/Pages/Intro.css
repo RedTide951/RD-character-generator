@@ -1,0 +1,42 @@
+.intro-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://i.pinimg.com/originals/30/b8/f0/30b8f0f3d3002600f59ab892ed04fce5.jpg");
+  background-size: cover;
+  transition: filter 0.3s ease-in-out;
+}
+
+.blur {
+  filter: blur(10px); /* Set your desired blur amount */
+}
+
+.no-blur {
+  filter: none;
+}
+
+.intro-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Adjust the background color and opacity */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.intro-button:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    1
+  ); /* Adjust the hover background color and opacity */
+}

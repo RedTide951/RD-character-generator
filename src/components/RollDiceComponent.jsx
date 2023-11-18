@@ -1,7 +1,17 @@
-import React, { useState } from 'react';
-import Button from '@mui/material/Button';
+import React, { useState } from "react";
+import Button from "@mui/material/Button";
 
-const abilityNames = ['Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Perception', 'Willpower', 'Charisma'];
+const abilityNames = [
+  "Strength",
+  "Agility",
+  "Dexterity",
+  "Constitution",
+  "Intelligence",
+  "Perception",
+  "Willpower",
+  "Charisma",
+  "Luck",
+];
 
 const RollDiceComponent = () => {
   const [results, setResults] = useState([]);
@@ -25,22 +35,28 @@ const RollDiceComponent = () => {
   };
 
   return (
-    <div style={{ textAlign: 'center', marginBottom: '20px', marginTop: '20px' }}>
-    <Button variant="contained" color="primary" onClick={rollDice}>
-      Roll Stats
-    </Button>
-    {results.length > 0 && (
-      <div className="dice-results">
-        {results.map((roll, index) => (
-          <div key={index} className="result-item">
-            <p>{roll.ability}</p>
-            <p>{`${roll.result}`}</p>
-            <p style={{ fontWeight: 'bold' }}>{`Modifier: ${roll.modifier > 0 ? '+' : ''}${roll.modifier}`}</p>
-          </div>
-        ))}
-      </div>
-    )}
-  </div>
+    <div
+      style={{ textAlign: "center", marginBottom: "10px", marginTop: "10px" }}
+    >
+      <Button variant="contained" color="primary" onClick={rollDice}>
+        Roll Stats
+      </Button>
+      {results.length > 0 && (
+        <div className="dice-results">
+          {results.map((roll, index) => (
+            <div key={index} className="result-item">
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p>{roll.ability}</p>
+                <p>{`${roll.result}`}</p>
+                <p style={{ fontWeight: "bold" }}>{`Modifier: ${
+                  roll.modifier > 0 ? "+" : ""
+                }${roll.modifier}`}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
   );
 };
 
