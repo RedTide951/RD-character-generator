@@ -2,6 +2,8 @@
 
 An app I developed to simplify character generation for new players.
 
+Preview the app: rd-character-generator.vercel.app
+
 The app utilizes random tables to generate a character's name and background. It then rolls a six-sided dice three times, recording the results for corresponding stats. Following this, the app calculates skill bonuses: for every two points above 10, it grants a +1 bonus, and for every two points below 10, it grants a -1 bonus. For instance, if a stat is at 8, it means a -1 bonus, while a stat at 16 means a +3 bonus. Users can generate multiple results until they're satisfied with the outcomes.
 
 
